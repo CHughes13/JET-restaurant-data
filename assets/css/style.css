@@ -5,11 +5,19 @@
     box-sizing: border-box;
 }
 
+/* Basic Just Eat Brand colours. Change to using alias tokens if time */
+:root {
+    --orange: #ff8000;
+    --dark-orange: #f36805;
+    --gray: #f5f3f1;
+    --black: #242e30;
+}
+
 
 
 /* Header */
 header {
-    background-color: orange;
+    background-color: var(--orange);
 }
 
 /* Main content */
@@ -20,5 +28,5 @@ main {
 
 /* Footer */
 footer {
-    background-color: gray;
+    background-color: var(--gray);
 }
