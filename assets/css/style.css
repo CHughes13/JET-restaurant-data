@@ -30,3 +30,23 @@ main {
 footer {
     background-color: var(--gray);
 }
+
+/* Vertically aligns and centers social media icons */
+#social-media {
+    text-align: center;
+    padding: 20px 0; /* Add vertical breathing space between social media icons */
+    display: flex; /* Flexbox spaces social media icons evenly along footer */
+    justify-content: space-evenly;
+    list-style-type: none; /* Remove bullet point icons from list */
+}
+
+/* Increase size of social media icon and change to brand color */
+#social-media i {
+    font-size: 160%;
+    padding: 5%;
+    color: var(--black);
+}
+
+#social-media i:hover {
+    color: var(--dark-orange);
+}
