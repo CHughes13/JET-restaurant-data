@@ -13,7 +13,32 @@
     --black: #242e30;
 }
 
+/*
+Load and use Just Eat's custom font, JETSansDigital, via their
+Content Delivery Network (CDN) link (there's only a font file,
+not a ready made CSS file)
+*/
 
+/* JETSansDigital font in Regular style */
+@font-face {
+    font-family: 'JETSansDigital';
+    src: url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Regular-optimised.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* JETSansDigital font in bold style */
+@font-face {
+    font-family: 'JETSansDigital';
+    src: url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Bold-optimised.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+body {
+    /* Sets Arial as fallback font in case JETSansDigital fails to load */
+    font-family: 'JETSansDigital', Arial, sans-serif;
+}
 
 /* Header */
 header {
