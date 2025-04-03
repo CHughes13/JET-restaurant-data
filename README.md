@@ -1,6 +1,6 @@
 # Just Eat Takeaway Restaurant Data Project
 # Project status: Under construction!
-### Deployed link: Insert here
+### Deployed link: [https://chughes13.github.io/JET-restaurant-data/](https://chughes13.github.io/JET-restaurant-data/)
 
 
 ***
