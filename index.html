@@ -21,10 +21,34 @@
 
 <body>
     <!-- Header -->
-    <header>Header</header>
+    <header>
+        <h1>Find restaurants on Just Eat</h1>
+    </header>
 
     <!-- Main content -->
-    <main>Main content</main>
+    <main>
+        <div id="postcodeSearchInterface">
+            <p>Type in a postcode and we'll show you 10 restaurants near you.</p>
+
+            <!--
+            SEARCH FORM: Text input for user to enter their postcode to search
+            for nearby restaurants.
+            -->
+            <form id="searchForm" onsubmit="event.preventDefault(); searchRestaurants();">
+                <input type="text" id="postcode" placeholder="Enter postcode (e.g., EC4M 7RF)">
+                <button onclick="submit">Search</button>
+            </form>
+
+            <!--
+            RESULTS from Just Eat API showing the first 10 restaurant results
+            each displaying the restaurant name, cuisine/s, address and star rating
+            (as a number)
+             -->
+            <div id="results">
+                <!-- Display results either as cards or in table format -->
+            </div>
+
+    </main>
     
     <!-- Footer -->
     <footer>
