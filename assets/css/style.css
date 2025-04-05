@@ -48,10 +48,11 @@ body {
 p {
     padding: 10px;
 }
+
 /* Form input style */
 input {
     min-width: 225px; /*Minimum width so all placeholder text will be visible */
-    max-width: 100%; /* Ensures repsonsiveness */
+    max-width: 100%; /* Ensures responsiveness */
     padding:10px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -62,7 +63,7 @@ input {
 
 button {
     min-width: 80px; /*Minimum width so all placeholder text will be visible */
-    max-width: 100%; /* Ensures repsonsiveness */
+    max-width: 100%; /* Ensures responsiveness */
     padding:10px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -77,8 +78,8 @@ button:hover {
 }
 
 /*
-Search button to give feedback to user when clicked
-to look like it's being pressed down.
+Search button to give user visual feedback to
+user when clicked.
 */
 button:active {
     background-color: var(--dark-orange);
@@ -99,12 +100,23 @@ main {
 }
 
 
+/* Results - Restaurant cards */
+#results {
+}
 
-
-
-
-
-
+.restaurant-card {
+    min-width: 225px; /*Minimum width so all placeholder text will be visible */
+    max-width: 100%; /* Ensures responsiveness */
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 2px solid var(--black);
+    border-radius: 5px;
+    background-color: var(--gray); /* To make card stand out slightly from background */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: var(--black);
+}
 
 
 /* Footer */
