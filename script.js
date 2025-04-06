@@ -55,9 +55,31 @@ function displayRestaurantData(data) {
 
     restaurantCard.textContent ="";
     restaurantCard.style.display = "flex";
+
+    // Create elements to add the restaurant card
+    const restaurantNameDisplay = document.createElement("h2");
+    const cuisinesDisplay = document.createElement("p");
+    const ratingDisplay = document.createElement("p");
+    const addressDisplay = document.createElement("p");
+
+    // Populate each element in the restaurant with the following restaurant data
+    restaurantNameDisplay.textContent = `Name: ${}`;
+    cuisinesDisplay.textContent = `Cuisine/s: ${}`;
+    ratingDisplay.textContent = `Star Rating: ${}`;
+    addressDisplay.textContent = `Address: ${}`;
+
+// Style each seperate element     //Make sure these class stlyes are in the CSS
+    restaurantNameDisplay.classList.add("restaurantNameDisplay");
+    cuisinesDisplay.classList.add("cuisinesDisplay");
+    ratingDisplay.classList.add("ratingDisplay");
+    addressDisplay.classList.add("addressDisplay");
+
+    // Add the data to the restaurant card
+    restaurantCard.appendChild(restaurantNameDisplay);
+    restaurantCard.appendChild(cuisinesDisplay);
+    restaurantCard.appendChild(ratingDisplay);
+    restaurantCard.appendChild(addressDisplay);
 }
-
-
 
 
 
@@ -68,6 +90,6 @@ function displayError(message) {
   errorDisplay.classList.add("errorDisplay");
 
   restaurantCard.textContent = ""; // Resets form input to blank
-  restaurantCard.style.display = "flex"; // Makes restaurantCard visible to user
-  restaurantCard.appendChild(errorDisplay); // Shows user an error message
+  restaurantCard.style.display = "flex"; // Makes restaurantCard visible to user using flexbox
+  restaurantCard.appendChild(errorDisplay); // Adds error message to restaurantCard
 }
