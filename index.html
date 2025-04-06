@@ -35,8 +35,9 @@
             for nearby restaurants.
             -->
             <form id="searchForm" onsubmit="event.preventDefault(); searchRestaurants();">
-                <input type="text" id="postcode" placeholder="Enter postcode (e.g., EC4M 7RF)">
-                <button onclick="submit">Search</button>
+                <input type="text" id="postcodeInput" placeholder="Enter postcode (e.g., EC4M 7RF)">
+                <button type="submit">Search</button>
+              <!--  <button onclick="submit">Search</button> -->
             </form>
 
             <!--
@@ -51,6 +52,7 @@
                     <p id="cuisine">Cuisine type</p>
                     <p id="rating"><span style="font-weight: bold;">Rating: </span>4.5 stars</p>
                     <p id="address">123 Fake Street, Springfield</p>
+                    <p id="errorDisplay">Please enter a valid postcode</p>
                  </div>
             </div>
 
