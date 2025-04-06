@@ -40,15 +40,25 @@ async function getRestaurantData(postcode) {
         throw new Error("Could not fetch restaurant data");
     }
 
-    const data = await response.json() //Converts response to a JSON format
+    const data = await response.json(); //Converts response to a JSON format
     console.log("Fetched data:", data); // Debugging line
-    return data;
+    return data; // Drill down into data returned
 }
 
-// Function to display restaurant data on the page
-function displayRestaurantData(data) {}
+// Function to get only the restaurant data we want
+function displayRestaurantData(data) {
+    const {
+        restauantName: name,
+        address: {firstLine},
+        rating: {starRating},
+        cuisines: [{name}];} = data;
+}
 
-// Function to sisplay error message if postcode input is invalid
+
+
+
+
+// Function to display error message if postcode input is invalid
 function displayError(message) {
   const errorDisplay = document.createElement("p");
   errorDisplay.textContent = message;
