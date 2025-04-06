@@ -51,7 +51,10 @@ function displayRestaurantData(data) {
         restauantName: name,
         address: {firstLine},
         rating: {starRating},
-        cuisines: [{name}];} = data;
+        cuisines: [{name}]} = data;
+
+    restaurantCard.textContent ="";
+    restaurantCard.style.display = "flex";
 }
 
 
