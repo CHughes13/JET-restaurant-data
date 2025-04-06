@@ -33,10 +33,10 @@ not a ready made CSS file)
     src: url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Bold-optimised.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
-  }
+}
 
 
-  /* General body styles */
+/* General body styles */
 body {
     /* Sets Arial as fallback font in case JETSansDigital fails to load */
     font-family: 'JETSansDigital', Arial, sans-serif;
@@ -50,10 +50,12 @@ p {
 }
 
 /* Form input style */
-input {
-    min-width: 225px; /*Minimum width so all placeholder text will be visible */
-    max-width: 100%; /* Ensures responsiveness */
-    padding:10px;
+.postcodeInput {
+    min-width: 225px;
+    /*Minimum width so all placeholder text will be visible */
+    max-width: 100%;
+    /* Ensures responsiveness */
+    padding: 10px;
     margin-top: 10px;
     margin-bottom: 20px;
     border: 2px solid var(--black);
@@ -62,9 +64,11 @@ input {
 }
 
 button[type="submit"] {
-    min-width: 80px; /*Minimum width so all placeholder text will be visible */
-    max-width: 100%; /* Ensures responsiveness */
-    padding:10px;
+    min-width: 80px;
+    /*Minimum width so all placeholder text will be visible */
+    max-width: 100%;
+    /* Ensures responsiveness */
+    padding: 10px;
     margin-top: 10px;
     margin-bottom: 20px;
     border: 2px solid var(--black);
@@ -87,7 +91,12 @@ button:active {
     transform: translateY(4px);
 }
 
-
+/* Error display message */
+.errorDisplay {
+    font-size: 2.5 rem;
+    font-weight: bold;
+    color: var(--black);
+}
 
 /* Header */
 header {
@@ -96,21 +105,24 @@ header {
 
 /* Main content */
 main {
-    background-color:white;
+    background-color: white;
 }
 
 
 /* Results - Restaurant cards */
 
 .restaurantCard {
-    min-width: 225px; /*Minimum width so all placeholder text will be visible */
-    max-width: 100%; /* Ensures responsiveness */
+    min-width: 225px;
+    /*Minimum width so all placeholder text will be visible */
+    max-width: 100%;
+    /* Ensures responsiveness */
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 20px;
     border: 2px solid var(--black);
     border-radius: 5px;
-    background-color: var(--gray); /* To make card stand out slightly from background */
+    background-color: var(--gray);
+    /* To make card stand out slightly from background */
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
     text-align: center;
     color: var(--black);
@@ -125,10 +137,13 @@ footer {
 /* Vertically aligns and centers social media icons */
 #socialMedia {
     text-align: center;
-    padding: 20px 0; /* Add vertical breathing space between social media icons */
-    display: flex; /* Flexbox spaces social media icons evenly along footer */
+    padding: 20px 0;
+    /* Add vertical breathing space between social media icons */
+    display: flex;
+    /* Flexbox spaces social media icons evenly along footer */
     justify-content: space-evenly;
-    list-style-type: none; /* Remove bullet point icons from list */
+    list-style-type: none;
+    /* Remove bullet point icons from list */
 }
 
 /* Increase size of social media icon and change to brand color */
