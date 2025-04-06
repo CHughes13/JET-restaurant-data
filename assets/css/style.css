@@ -128,7 +128,9 @@ button:active {
     margin-bottom: 10px;
 }
 
-.cuisinesDisplay, .ratingDisplay, .addressDisplay {
+.cuisinesDisplay,
+.ratingDisplay,
+.addressDisplay {
     font-weight: bold;
     font-size: 2rem;
     color: var(--black);

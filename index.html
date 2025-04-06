@@ -7,33 +7,29 @@
     <!-- Meta tags for search engines-->
     <meta
       name="description"
-      content="Just Eat Takeaway Restaurant Data Web App"
-    />
+      content="Just Eat Takeaway Restaurant Data Web App">
     <meta
       name="keywords"
-      content="Just Eat Takeaway, Just Eat, Takeaway, restaurants, food, food ratings, restaurant postcode"
-    />
+      content="Just Eat Takeaway, Just Eat, Takeaway, restaurants, food, food ratings, restaurant postcode">
 
     <!-- Project Title -->
     <title>JET Restaurant Data</title>
 
-    <!-- Favicon to be added -->
+    <!-- Favicon to be added at later stage/sprint-->
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
 
   <body>
     <!-- Header -->
     <header>
       <h1>Find restaurants on Just Eat</h1>
+      <p>Type in a postcode and we'll show you 10 restaurants near you.</p>
     </header>
 
     <!-- Main content -->
     <main>
-      <div id="postcodeSearchInterface">
-        <p>Type in a postcode and we'll show you 10 restaurants near you.</p>
-
         <!--
             SEARCH FORM: Text input for user to enter their postcode to search
             for nearby restaurants.
@@ -42,27 +38,12 @@
           <input
             type="text"
             class="postcodeInput"
-            placeholder="Enter postcode (e.g., EC4M 7RF)"
-          />
+            placeholder="Enter postcode (e.g., EC4M 7RF)">
           <button type="submit">Search</button>
-          <!--  <button onclick="submit">Search</button> -->
         </form>
 
-        <!--
-            RESULTS from Just Eat API showing the first 10 restaurant results
-            each displaying the restaurant name, cuisine/s, address and star rating
-            (as a number)
-             -->
-
-        <!-- Display results in card format -->
-        <div class="restaurantCard" style="display: none">
-          <!-- Hides results until a search is performed -->
-          <!--  <h2 id="restaurantName">Restaurant Name</h2>
-              <p id="cuisine">Cuisine type</p>
-              <p id="rating"><span style="font-weight: bold;">Rating: </span>4.5 stars</p>
-              <p id="address">123 Fake Street, Springfield</p>
-              <p class="errorDisplay">Please enter a valid postcode</p> -->
-        </div>
+        <!-- Display restaurant data results from Just Eat API in card format -->
+        <div class="restaurantCard" style="display: none"></div>
       </div>
     </main>
 
@@ -123,10 +104,12 @@
     <!-- Font Awesome Kit -->
     <script
       src="https://kit.fontawesome.com/82f40b5fc0.js"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous">
+    </script>
 
-    <!-- Link to external JavaScript -->
+    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
+
   </body>
+
 </html>
