@@ -34,8 +34,8 @@
             SEARCH FORM: Text input for user to enter their postcode to search
             for nearby restaurants.
             -->
-            <form id="searchForm" onsubmit="event.preventDefault(); searchRestaurants();">
-                <input type="text" id="postcodeInput" placeholder="Enter postcode (e.g., EC4M 7RF)">
+            <form class="postcodeSearchForm">
+                <input type="text" class="postcodeInput" placeholder="Enter postcode (e.g., EC4M 7RF)">
                 <button type="submit">Search</button>
               <!--  <button onclick="submit">Search</button> -->
             </form>
@@ -47,7 +47,7 @@
              -->
             
             <div id="results" style="display: none"> <!-- Hides results until a search is performed -->
-                <!-- Display results in card format - hardcoding for now to test -->
+                <!-- Display results in card format -->
                  <div class="restaurantCard">
                     <h2 id="restaurantName">Restaurant Name</h2>
                     <p id="cuisine">Cuisine type</p>

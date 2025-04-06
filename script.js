@@ -1,4 +1,12 @@
+// Restaurant data app using postcode search
 
+const postcodeSearchForm = document.querySelector(".postcodeSearchForm");
+const postcodeInput = document.querySelector("postcodeInput");
+const restaurantCard = document.querySelector("restaurantCard");
+
+postcodeSearchForm.addEventListener("submit", event => {preventDefault();
+
+});
 
 // Function to return postcode restaurant data from Just Eat API
 async function fetchData(){
