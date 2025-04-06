@@ -1,103 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Meta tags for search engines-->
-    <meta name="description" content="Just Eat Takeaway Restaurant Data Web App">
-    <meta name="keywords" content="Just Eat Takeaway, Just Eat, Takeaway, restaurants, food, food ratings, restaurant postcode">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Meta tags for search engines-->
+    <meta
+      name="description"
+      content="Just Eat Takeaway Restaurant Data Web App">
+    <meta
+      name="keywords"
+      content="Just Eat Takeaway, Just Eat, Takeaway, restaurants, food, food ratings, restaurant postcode">
 
     <!-- Project Title -->
     <title>JET Restaurant Data</title>
 
-    <!-- Favicon to be added -->
+    <!-- Favicon to be added at later stage/sprint-->
 
-    <!-- Stylesheet -->
-     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!-- Header -->
     <header>
-        <h1>Find restaurants on Just Eat</h1>
+      <h1>Find restaurants on Just Eat</h1>
+      <p>Type in a postcode and we'll show you 10 restaurants near you.</p>
     </header>
 
     <!-- Main content -->
     <main>
-        <div id="postcodeSearchInterface">
-            <p>Type in a postcode and we'll show you 10 restaurants near you.</p>
-
-            <!--
+        <!--
             SEARCH FORM: Text input for user to enter their postcode to search
             for nearby restaurants.
             -->
-            <form id="searchForm" onsubmit="event.preventDefault(); searchRestaurants();">
-                <input type="text" id="postcode" placeholder="Enter postcode (e.g., EC4M 7RF)">
-                <button onclick="submit">Search</button>
-            </form>
+        <form class="postcodeSearchForm">
+          <input
+            type="text"
+            class="postcodeInput"
+            placeholder="Enter postcode (e.g., EC4M 7RF)">
+          <button type="submit">Search</button>
+        </form>
 
-            <!--
-            RESULTS from Just Eat API showing the first 10 restaurant results
-            each displaying the restaurant name, cuisine/s, address and star rating
-            (as a number)
-             -->
-            <div id="results">
-                <!-- Display results in card format - hardcoding for now to test -->
-                 <div class="restaurant-card">
-                    <h2 id="restaurant-name">Restaurant Name</h2>
-                    <p id="cuisine">Cuisine type</p>
-                    <p id="rating"><span style="font-weight: bold;">Rating: </span>4.5 stars</p>
-                    <p id="address">123 Fake Street, Springfield</p>
-                 </div>
-            </div>
-
+        <!-- Display restaurant data results from Just Eat API in card format -->
+        <div class="restaurantCard" style="display: none"></div>
+      </div>
     </main>
-    
+
     <!-- Footer -->
     <footer>
+      <!-- Clickable social media icons -->
+      <ul id="socialMedia">
+        <!-- Link to Just Eat Facebook -->
+        <li>
+          <a
+            href="https://www.facebook.com/justeat"
+            target="_blank"
+            rel="noopener"
+            aria-label="Visit our Facebook page (opens in new tab)"
+          >
+            <i class="fa-brands fa-square-facebook"></i
+          ></a>
+        </li>
 
-        <!-- Clickable social media icons -->
-        <ul id="social-media">
-            
-            <!-- Link to Just Eat Facebook -->
-            <li>
-              <a href="https://www.facebook.com/justeat" target="_blank" rel="noopener"
-                aria-label="Visit our Facebook page (opens in new tab)">
-                <i class="fa-brands fa-square-facebook"></i></a>
-            </li>
-            
-            <!-- Link to Just Eat Instagram -->
-            <li>
-                <a href="https://www.instagram.com/justeatuk/" target="_blank" rel="noopener"
-                  aria-label="Visit our Instagram page (opens in new tab)">
-                  <i class="fa-brands fa-square-instagram"></i></a>
-              </li>
-            
-              <!-- Link to Just Eat Twitter/X -->
-            <li>
-              <a href="https://x.com/JustEatUK" target="_blank" rel="noopener"
-                aria-label="Visit our Twitter/X page (opens in new tab)">
-                <i class="fa-brands fa-square-x-twitter"></i></a>
-            </li>
+        <!-- Link to Just Eat Instagram -->
+        <li>
+          <a
+            href="https://www.instagram.com/justeatuk/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Visit our Instagram page (opens in new tab)"
+          >
+            <i class="fa-brands fa-square-instagram"></i
+          ></a>
+        </li>
 
-            <!-- Link to Just Eat YouTube -->
-            <li>
-              <a href="https://www.youtube.com/TVjusteat" target="_blank" rel="noopener"
-              aria-label="Visit our YouTube page (opens in new tab)">
-              <i class="fa-brands fa-square-youtube"></i></a>
-            </li>
-          </ul>
+        <!-- Link to Just Eat Twitter/X -->
+        <li>
+          <a
+            href="https://x.com/JustEatUK"
+            target="_blank"
+            rel="noopener"
+            aria-label="Visit our Twitter/X page (opens in new tab)"
+          >
+            <i class="fa-brands fa-square-x-twitter"></i
+          ></a>
+        </li>
+
+        <!-- Link to Just Eat YouTube -->
+        <li>
+          <a
+            href="https://www.youtube.com/TVjusteat"
+            target="_blank"
+            rel="noopener"
+            aria-label="Visit our YouTube page (opens in new tab)"
+          >
+            <i class="fa-brands fa-square-youtube"></i
+          ></a>
+        </li>
+      </ul>
     </footer>
 
     <!-- Font Awesome Kit -->
-    <script src="https://kit.fontawesome.com/82f40b5fc0.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/82f40b5fc0.js"
+      crossorigin="anonymous">
+    </script>
 
-    <!-- Link to external JavaScript -->
-     <script src="script.js"></script>
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
 
-</body>
+  </body>
 
 </html>
