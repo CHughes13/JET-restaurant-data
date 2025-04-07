@@ -1,45 +1,49 @@
-// Fetch Restaurant Data
-
+// Fetch restaurant data
 import restaurantData from "./restaurants.json";
 
-// Loop through the first 10 restaurant results only
-restaurantData.restaurants.slice(0,10).forEach(restaurant => {
+// Create a single restaurant card
+function createRestaurantCard(restaurant) {
+    const { 
+        restaurantName,
+        cuisines: [{ name: cuisineName }], // Cuisines are in an array
+        rating: { starRating },
+        address: { firstLine }, 
+    } = restaurant;
 
-    // Generate restaurant cards
-// Function to get only the specific restaurant data we want
-function displayRestaurantData(data) {
-    const {
-        restauantName: name,
-        address: {firstLine},
-        rating: {starRating},
-        cuisines: [{name}]} = data;
+    const card = document.createElement("div");
+    card.classList.add("restaurantCard");
 
-    restaurantCard.textContent ="";
-    restaurantCard.style.display = "flex";
-
-    // Create elements to add the restaurant card
     const restaurantNameDisplay = document.createElement("h2");
-    const cuisinesDisplay = document.createElement("p");
+    restaurantNameDisplay.textContent = `Name: ${restaurantName}`;
+
+    const cuisineDisplay = document.createElement("p");
+    cuisineDisplay.textContent = `Cuisine/s: ${cuisineName}`;
+
     const ratingDisplay = document.createElement("p");
+    ratingDisplay.textContent = `Star Rating: ${starRating}`;
+
     const addressDisplay = document.createElement("p");
+    addressDisplay.textContent = `Address: ${firstLine}`;
 
-    // Populate each element in the restaurant with the following restaurant data
-    restaurantNameDisplay.textContent = `Name: ${}`;
-    cuisinesDisplay.textContent = `Cuisine/s: ${}`;
-    ratingDisplay.textContent = `Star Rating: ${}`;
-    addressDisplay.textContent = `Address: ${}`;
-
-    // Style each seperate element     //Make sure these class stlyes are in the CSS
+    // Add your CSS classes to data being returned
     restaurantNameDisplay.classList.add("restaurantNameDisplay");
-    cuisinesDisplay.classList.add("cuisinesDisplay");
+    cuisineDisplay.classList.add("cuisinesDisplay");
     ratingDisplay.classList.add("ratingDisplay");
     addressDisplay.classList.add("addressDisplay");
 
-    // Add the data to the restaurant card
-    restaurantCard.appendChild(restaurantNameDisplay);
-    restaurantCard.appendChild(cuisinesDisplay);
-    restaurantCard.appendChild(ratingDisplay);
-    restaurantCard.appendChild(addressDisplay);
+    // Append all elements to the card
+    card.appendChild(restaurantNameDisplay);
+    card.appendChild(cuisineDisplay);
+    card.appendChild(ratingDisplay);
+    card.appendChild(addressDisplay);
+
+    return card;
 }
 
+// Render only the first 10 restaurants
+const restaurantContainer = document.querySelector("#restaurantContainer"); 
+
+restaurantData.restaurants.slice(0, 10).forEach(restaurant => {
+    const card = createRestaurantCard(restaurant);
+    restaurantContainer.appendChild(card);
 });
