@@ -40,10 +40,12 @@ function createRestaurantCard(restaurant) {
     return card;
 }
 
-// Render only the first 10 restaurants
+// Render only the first 10 restaurants as cards and append to container
 const restaurantContainer = document.querySelector("#restaurantContainer"); 
 
 restaurantData.restaurants.slice(0, 10).forEach(restaurant => {
     const card = createRestaurantCard(restaurant);
     restaurantContainer.appendChild(card);
 });
+
+
