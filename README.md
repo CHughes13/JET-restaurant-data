@@ -96,10 +96,23 @@ __As a user:__
 Created using Balsamiq, here are the initial lofi wireframes for the project. These provide a visual outline of the planned layout and proposed functionality.
 
 #### Mobile
-Lofi wireframes to be added.
+Lofi wireframes for mobile devices. From left to right: start screen, screen displaying results as cards, error feedback for the user.
+![lofi-wireframe-mobile](https://github.com/user-attachments/assets/3f3235d3-5f5d-4ece-a397-d0dcd7b5cbb7)
 
 #### Desktop
-Lofi wireframes to be added.
+Lofi wireframes for desktop devices. From left to right: start screen, screen displaying results as cards, error feedback for the user.
+
+Start screen
+![lofi-wireframe-desktop-start-screen](https://github.com/user-attachments/assets/75d1436e-d4bd-4ef9-9fbd-68fc89251387)
+
+
+Screen displaying results as cards
+![lofi-wireframe-desktop-1-display-screen](https://github.com/user-attachments/assets/7e90d7a6-55aa-4e5a-9d20-81b88ebc2dce)
+
+
+Error feedback for the user
+![lofi-wireframe-desktop-error-feedback](https://github.com/user-attachments/assets/ae58533a-f827-4559-b4b4-b42a1544a5b8)
+
 
 [Back to top](#)
 
@@ -107,6 +120,10 @@ Lofi wireframes to be added.
 
 ## Features
 This project was planned out using agile principles. I used the MoSCoW prioritisation method to determine which features were most important and a "must have" in order to meet the user's needs and achieve a MVP in this initial sprint.
+
+MoSCoW Method Diagram courtesy of [Bitesize Learning](https://www.bitesizelearning.co.uk/resources/moscow-prioritisation-model)
+![moscow-method-diagram](https://github.com/user-attachments/assets/1de1b53d-69a4-44b9-83d0-52d6650d9523)
+
 INSERT MOWCOW IMAGE here and link/credit 
 https://www.bitesizelearning.co.uk/resources/moscow-prioritisation-model
 
@@ -136,7 +153,10 @@ Using the MoSCoW method, it was determined that these features weren't essential
 Testing was done throughout, both manually (by myself and outside testers) and using validators (see below).
 
 ### Manual Testing
-Manual testing was performed throughout using console.log and console.error.
+Manual testing was performed throughout using console.log and console.error, as well as web dev tools in Google Chrome.
+![testing-dev-tools-console](https://github.com/user-attachments/assets/61f1dd8b-beda-411c-bb7e-20bc527ce2f9)
+
+
 
 | Test | Expected Result | Actual Result	| Pass/Fail |
 | ------ | ------------------- |----------------- |------------ |
@@ -147,7 +167,7 @@ Manual testing was performed throughout using console.log and console.error.
 |  Ensure restaurant data is correctly displayed  |  Each restaurant's data (name, cuisine, rating, address) will be shown as a card in that order with the correct details | Works as expected  |  Pass  |
 
 
-### Validator Testing
+### Validator Testing -TBA
 
 - HTML
   - Passed through the official [W3C validator](https://validator.w3.org/): some errors
@@ -171,14 +191,14 @@ Insert mobile screenshot here
 
 ***
 
-### Bugs Fixed
+### Bugs Fixed - TBA
 
 | Bug | Fix |
 |-----|-----|
 | API call returning CORS error and data not displaying after fetch | Requested access to API demo server |
 | Favicons not showing up on deployed site | Corrected file paths from absolute to relative |
 
-### Known Bugs
+### Known Bugs - TBA
 | Known Bug | Potential Fix |
 |-----|-----|
 
@@ -229,6 +249,7 @@ __Resources Used and Consulted__
 __Media__  
 - [Font Awesome](https://fontawesome.com/) for the social media icons in the footer and magnifying glass in search bar.
 - Restaurant logos and favicons courtesy of the [Just Eat](https://www.just-eat.com) website.
+- MoSCoW Method Diagram courtesy of [Bitesize Learning](https://www.bitesizelearning.co.uk/resources/moscow-prioritisation-model)
 
 __Special Thanks To__ 
 - The Just Eat team for this wonderful opportunity.
