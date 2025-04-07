@@ -13,7 +13,7 @@
       content="Just Eat Takeaway, Just Eat, Takeaway, restaurants, food, food ratings, restaurant postcode">
 
     <!-- Project Title -->
-    <title>JET Restaurant Data</title>
+    <title>JET Restaurant Data Search</title>
 
     <!-- Favicons -->
      <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico-48x48.ico">
@@ -47,9 +47,17 @@
           <button type="submit">Search <i class="fa-solid fa-magnifying-glass"></i> </button>
         </form>
 
+
         <!-- Display restaurant data results from Just Eat API in card format -->
+<div id="restaurantContainer">
+        <h1>Restaurants in your area</h1>
         <div class="restaurantCard" style="display: none"></div>
       </div>
+    </div>
+
+    <!-- Error message if no results are found -->
+    <div id="errorMessage" class="errorDisplay"></div>
+
     </main>
 
     <!-- Footer -->
@@ -113,7 +121,7 @@
     </script>
 
     <!-- Link to external JavaScript file -->
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 
   </body>
 
