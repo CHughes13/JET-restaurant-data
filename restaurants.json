@@ -1,0 +1,32 @@
+// Insert data from API endpoint BS3 4AE here
+
+//test data
+[
+    {
+        "name": "The Coffee House",
+        "address": "123 High Street, Bristol, BS3 4AE",
+        "cuisine": "Cafe",
+        "rating": 4.5,
+        "price_range": "$$",
+        "website": "http://thecoffeehouse.com",
+        "phone": "+44 117 123 4567"
+    },
+    {
+        "name": "Spice of India",
+        "address": "456 Elm Street, Bristol, BS3 4AE",
+        "cuisine": "Indian",
+        "rating": 4.7,
+        "price_range": "$$",
+        "website": "http://spiceofindia.com",
+        "phone": "+44 117 234 5678"
+    },
+    {
+        "name": "Pasta Palace",
+        "address": "789 Oak Avenue, Bristol, BS3 4AE",
+        "cuisine": "Italian",
+        "rating": 4.2,
+        "price_range": "$$",
+        "website": "http://pastapalace.com",
+        "phone": "+44 117 345 6789"
+    }
+]
