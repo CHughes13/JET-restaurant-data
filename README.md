@@ -1,52 +1,52 @@
 # Just Eat Takeaway Restaurant Data Project
-# Project status: Under construction!
-### Deployed link: [https://chughes13.github.io/JET-restaurant-data/](https://chughes13.github.io/JET-restaurant-data/)
+
+**Project status**: In progress  
+**Deployed link**: [https://chughes13.github.io/JET-restaurant-data/](https://chughes13.github.io/JET-restaurant-data/)
+
 
 
 ***
 
 ## Contents
 - [Introduction](#introduction)
-- [Assumptions / Unclear](#assumptions-/-unclear)
+- [Assumptions / Unclear](#assumptions--unclear)
 - [Technologies Used](#technologies-used)
 - [UX/UI](#uxui)
-- [Site Goals](#site-goals)
-- [User Stories](#user-stories)
-- [Wireframes](#wireframes)
-  - [Desktop](#desktop)
-  - [Mobile](#mobile)
+  - [Site Goals](#site-goals)
+  - [User Stories](#user-stories)
+  - [Wireframes](#wireframes)
 - [Features](#features)
   - [Existing Features](#existing-features)
   - [Features Left to Implement](#features-left-to-implement)
 - [Testing and Debugging](#testing-and-debugging)
-  - [Validator Testing](#validator-testing)
-  - [Bugs Fixed](#bugs-fixed)
 - [Setup and Running the Application](#setup-and-running-the-application)
 - [Deployment](#deployment)
-- [Credits](#credits)  
+- [Credits](#credits)
 
 [Back to top](#)
 
 *** 
 
 ## Introduction
-The aim of this project is to use the Just Eat API to find restaurant data and to display it in a web interface. Specifically:
-- Name
-- Cuisines
+The aim of this project is to create a responsive web application that allows users to search for local restaurants by postcode using the Just Eat Takeaway API. Results will display key information about the restauant in a clean, user-friendly layout. Results must include, at minimum:
+- Restaurant name
+- Type of cuisines
 - Rating (as a number)
 - Address
 
-This web application was created and built by Christina Hughes - [GitHub](https://github.com/CHughes13), [LinkedIn](https://www.linkedin.com/in/chughes13/)
+This web application was built by Christina Hughes - [GitHub](https://github.com/CHughes13), [LinkedIn](https://www.linkedin.com/in/chughes13/)
 
 [Back to top](#)
 
 *** 
 
 ## Assumptions / Unclear
-Due to the open-ended brief of this project, these are the following points that I found unclear and made my own assumptions about:
+While Just Eat Takeaway provided a project brief, these are the following points that I found unclear and made my own assumptions about:
 
-- User
-- ????
+- Users search for restaurants by postcode.
+- I assumed an API key would be provided — if not, mock data would be used.
+- Features like pagination or advanced filtering were considered out of scope for MVP due to time constraints.
+
 
 [Back to top](#)
 
@@ -56,8 +56,9 @@ Due to the open-ended brief of this project, these are the following points that
 
 - HTML5
 - CSS3
-- JavaScript used to make the website dynamic and include client-side validation
-- [Github Project Board](https://github.com/users/CHughes13/projects/2) used as project management tool to keep track of user stories
+- Vanilla JavaScript
+- [Balsamiq](https://balsamiq.com/) (for wireframes)
+
 
 [Back to top](#)
 
@@ -65,19 +66,26 @@ Due to the open-ended brief of this project, these are the following points that
 
 ## UX/UI
 ### Site Goals
-TBA
+- Allow users to search for restaurants by postcode (10 to be shown).
+- Display key restaurant data: name, cuisines, rating and address.
+- Provide a clean, responsive and accessible layout.
+- Prioritise mobile-first design...
+- ... with a good user experience on tablet and desktop too.
+
 
 [Back to top](#)
 
 ***    
   
 ### User Stories
+The project brief did not specify a specfic user (customer, delivery driver, restaurant, in-house Just Eat team, etc.) so I opted to go with a customer as the user.
 
 __As a user:__
-- EXAMPLE: I want to register an account so that I can make a booking and keep track of my past/future bookings.
-  - A user can create and register an account.
-  - The user can then log in.
-  - When the user is logged in they can make a booking.
+- I want to search for restaurants near me using a postcode.
+- I want to see useful information about each restaurant quickly. / I don't want to be overwhelmed by too much irrelevant information.
+- I want to be able to sort/filter the data that appears so I can find exactly what I want, quickly.
+- I want fast loading times.
+- I want the website to work well on both mobile and desktop.
 
   [Back to top](#)
 
@@ -85,7 +93,7 @@ __As a user:__
 
 ## Wireframes
 
-Here are the initial wireframes for the project (created using Balsamiq), along with screen shots of the initial design. These provide a visual outline of the planned layout and functionality.
+Created using Balsamiq, here are the initial lofi wireframes for the project. These provide a visual outline of the planned layout and proposed functionality.
 
 #### Mobile
 Lofi wireframes to be added.
@@ -98,13 +106,26 @@ Lofi wireframes to be added.
 ***
 
 ## Features
-This project was planned out using agile principles. I used the MoSCoW prioritisation method to determine which features were most important and a "must-have" in order to meet the user's needs and achieve a MVP in this initial sprint.
+This project was planned out using agile principles. I used the MoSCoW prioritisation method to determine which features were most important and a "must have" in order to meet the user's needs and achieve a MVP in this initial sprint.
+INSERT MOWCOW IMAGE here and link/credit 
+https://www.bitesizelearning.co.uk/resources/moscow-prioritisation-model
+
+### Existing Features
+- Search by postcode form.
+- Fetches and displays restaurant data from the Just Eat API.
+- Displays: Restaurant logo, restaurant name, cuisine type/s, rating and address.
+- Responsive layout for mobile, tablet and desktop.
+- Error handling for invalid postcodes or no results found.
 
 ### Features Left to Implement
 Using the MoSCoW method, it was determined that these features weren't essential to create a MVP but are more "should-have" and "could-have". Due to time constraintents these features were left out, but they would make great additions to the application in the future.
 
-- __EXAMPLE__ - Should Have / Could Have
-  - Insert reason here.
+- **Sorting**: Sort results by rating or name.
+- **Pagination**: To show more than just the first 10 restaurants.
+- **Filters**: The ability to filter restaurants based on cuisine or rating.
+- **Loading indicator**: A simple animation that lets the user know the search is in progress.
+- **Map integration** To show the locations of the restaurants on a map (better for user).
+- **Back to top button**: Quality of life feature. Saves having to scroll - a small issue, but annoying nontheless.
 
 [Back to top](#)
 
@@ -114,10 +135,17 @@ Using the MoSCoW method, it was determined that these features weren't essential
 
 Testing was done throughout, both manually (by myself and outside testers) and using validators (see below).
 
-__Test:__ Inputing an invalid postcode into search bar.  
-__Expectation:__ User will be prompted to input a valid postcode.  
-__Result:__ Pass/Fail 
-Screenshot of test to go here
+### Manual Testing
+Manual testing was performed throughout using console.log and console.error.
+
+| Test | Expected Result | Actual Result	| Pass/Fail |
+| ------ | ------------------- |----------------- |------------ |
+|  Input valid postcode into the search bar (BS3 4AE) |  List of first 10 restaurants shown as individual cards |  Works as expected  |  Pass  |
+|  Input invalid postcode into the search bar (BS3 4AE) |  Error message appears below search bar prompting the user to enter a valid postcode  |  Works as expected  |  Pass  |
+|  Leave the search bar empty and then hit search button  |  Error message appears below search bar prompting the user to enter a valid postcode  |  Works as expected  |  Pass  |
+|  Resize window to test layout responsiveness (mobile vs tablet vs desktop) |  List of first 10 restaurants shown as individual cards |  Works as expected  |  Pass  |
+|  Ensure restaurant data is correctly displayed  |  Each restaurant's data (name, cuisine, rating, address) will be shown as a card in that order with the correct details | Works as expected  |  Pass  |
+
 
 ### Validator Testing
 
@@ -132,9 +160,6 @@ Insert screenshot here
 - JavaScript
 Insert screenshots here 
 
-- CI Linter
-Insert screenshots here 
-
 - Website Optimization and Accessibility tested using Lighthouse via Chrome DevTools:
   - __Desktop__  
 Insert desktop screenshot here
@@ -147,44 +172,68 @@ Insert mobile screenshot here
 ***
 
 ### Bugs Fixed
-- __EXAMPLE: Collapse Navbar when goes into mobile mode__   
-Navigation items should drop down.
-Insert screenshot here.
+
+| Bug | Fix |
+|-----|-----|
+| API call returning CORS error and data not displaying after fetch | Requested access to API demo server |
+| Favicons not showing up on deployed site | Corrected file paths from absolute to relative |
+
+### Known Bugs
+| Known Bug | Potential Fix |
+|-----|-----|
 
 [Back to top](#)
 
 ***
-## Deployment
-Add how to build, complie and run the solution here
+
 
 ## Setup and Running the Application
 
-1. Fork repository on GitHub.
-2. Clone the repository to your local machine or download the HTML, CSS, and JavaScript files.
-3. Open the HTML file in a web browser to start the application.
+1. Clone the repository:
+git clone https://github.com/CHughes13/JET-restaurant-data.git
+
+2. Go into the project directory and open `index.html` in your browser.
+
+3. Ensure you have access to the Just Eat API demo server to fetch live data.
+
 
 [Back to top](#)
 
 ***
 
+## Deployment
+This project is deployed via GitHub Pages:
+
+[https://chughes13.github.io/JET-restaurant-data/](https://chughes13.github.io/JET-restaurant-data/)
+
+
+***
+
+
 ## Credits
 __Resources Used and Consulted__ 
-- [ChatGPT](https://openai.com/chatgpt/) used throughout for coding advice and inspiration.
-- [Blackbox AI](https://www.blackbox.ai/) used throughout for coding advice and inspiration.
-- [Font Awesome](https://fontawesome.com/) for the social media icons in footer.
-- [Favicon.io](https://favicon.io/) - online favicon generator used to draw favicon.
-- Angela Yu's [The Complete 2024 Web Development Bootcamp course on Udemy](https://www.udemy.com/course/the-complete-web-development-bootcamp) - reviewed videos to brush up on Python.
-- [Stack Overflow](https://stackoverflow.com/) for troubleshooting and understanding coding concepts.
+- [Just Eat Takeaway API and API Documentation](https://uk.api.just-eat.io/docs)
+- [Just Eat Color scheme Pie](https://pie.design/foundations/colour/tokens/alias/light/)
+- [Brand box](https://brand-box.marketing.just-eat.com/)
+- [Medium ](https://medium.com/jetux) for articles on Just Eat UX
 - [MDN web docs](https://developer.mozilla.org/) for helpful guides on all things coding.
 - [W3Schools](https://www.w3schools.com/) for helpful guides on all things coding.
-- [Bootstrap](https://getbootstrap.com/) for docs about Bootstrap.
+- [Stack Overflow](https://stackoverflow.com/) for troubleshooting and understanding coding concepts.
+- [ChatGPT](https://openai.com/chatgpt/) used throughout for coding advice, troubleshooting and inspiration.
+- [Blackbox AI](https://www.blackbox.ai/) used throughout for coding advice, troubleshooting and inspiration.
+- Angela Yu's [The Complete 2024 Web Development Bootcamp course on Udemy](https://www.udemy.com/course/the-complete-web-development-bootcamp)
+- [Bro Code](https://www.youtube.com/@BroCodez)'s helpful YouTube tutorials and explanations.
+- [JSON Visualiser](https://jsonviewer.stack.hu/)
+-[Postman](https://web.postman.co/)
 
 __Media__  
-Insert link and credit to any images etc. used here
+- [Font Awesome](https://fontawesome.com/) for the social media icons in the footer and magnifying glass in search bar.
+- Restaurant logos and favicons courtesy of the [Just Eat](https://www.just-eat.com) website.
 
-__Special Thanks To__
+__Special Thanks To__ 
+- The Just Eat team for this wonderful opportunity.
 - Code Institute's Coding Bootcamp.
-- TBA for technical support, advice, and manual testing.
+- Christopher, Sebastian and Ian for all their technical support, advice and testing.
 
 [Back to top](#)
 
