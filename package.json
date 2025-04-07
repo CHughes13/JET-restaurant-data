@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "needle": "^3.3.1"
+  },
+  "name": "jet-restaurant-data",
+  "version": "1.0.0",
+  "description": "***",
+  "main": "proxy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CHughes13/JET-restaurant-data.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CHughes13/JET-restaurant-data/issues"
+  },
+  "homepage": "https://github.com/CHughes13/JET-restaurant-data#readme"
+}
