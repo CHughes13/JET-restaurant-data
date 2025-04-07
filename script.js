@@ -27,13 +27,19 @@ postcodeSearchForm.addEventListener("submit", async event => {
 
 // Function to return postcode restaurant data from Just Eat API
 async function getRestaurantData(postcode) {
-    const proxyUrl = "https://cors-anywhere.herokuapp.com/"; // Free public proxy (limited use) to test fetch
-    const apiUrl = `https://uk.api.just-eat.io/discovery/uk/restaurants/enriched/bypostcode/${postcode}`;
-    const response = await fetch(proxyUrl + apiUrl, {
-        headers: {
-            'Origin': 'localhost'
-        }
-    });
+    const proxyUrl = "http://localhost:4000/api"; // Assuming your proxy server runs on port 4000
+    const apiUrl = `${proxyUrl}?postcode=${postcode}`;
+    const response = await fetch(apiUrl);
+
+
+
+    //const proxyUrl = "https://cors-anywhere.herokuapp.com/"; // Free public proxy (limited use) to test fetch
+    //const apiUrl = `https://uk.api.just-eat.io/discovery/uk/restaurants/enriched/bypostcode/${postcode}`;
+    //const response = await fetch(proxyUrl + apiUrl, {
+        //headers: {
+            '//Origin': 'localhost'
+        //}
+    };
     
     if(!response.ok){
         console.error("Error fetching data:", response.statusText); // Debugging line
