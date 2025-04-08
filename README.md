@@ -1,6 +1,6 @@
 # Just Eat Takeaway Restaurant Data Project
 
-**Project status**: In progress  
+**Project status**: In progress, but minimal viable product is available  
 **Deployed link**: [https://chughes13.github.io/JET-restaurant-data/](https://chughes13.github.io/JET-restaurant-data/)
 
 ![jet-project-deployed-start-screen](https://github.com/user-attachments/assets/ba058984-c0eb-4769-8127-f3e3ecc262e3)
@@ -35,7 +35,7 @@ The aim of this project is to create a responsive web application that allows us
 - Rating (as a number)
 - Address
 
-This web application was built by Christina Hughes - [GitHub](https://github.com/CHughes13), [LinkedIn](https://www.linkedin.com/in/chughes13/)
+This web application was built by Christina Hughes - [GitHub](https://github.com/CHughes13), [LinkedIn](https://www.linkedin.com/in/chughes13/) using the [Just Eat API](https://uk.api.just-eat.io/discovery/uk/restaurants/enriched/bypostcode/).
 
 [Back to top](#)
 
@@ -44,9 +44,16 @@ This web application was built by Christina Hughes - [GitHub](https://github.com
 ## Assumptions / Unclear
 While Just Eat Takeaway provided a project brief, these are the following points that I found unclear and made my own assumptions about:
 
-- Users search for restaurants by postcode.
-- I assumed an API key would be provided — if not, mock data would be used.
-- Features like pagination or advanced filtering were considered out of scope for MVP due to time constraints.
+- No interface defined: I went with a web application as this would be most user friendly.
+- No programming language define: I opted to make a web application and decided to use HTML, CSS and vanilla JavaScript.
+- No specific user defined: Depending on the type of user and how they would use the restaurant data, that would change how the information would be best displayed. During planning I considered the user as a customer, delivery driver, restaurant, in-house Just Eat team, etc. I opted to go with a customer as the end user.
+- No design scheme defined: There were no colors or fonts specified. As this was an API for Just Eat, I decided to use their brand colours and follow the styles they used on their main website (their special font, rounded boxes, etc.).
+- No device defined: It wasn't stated whether this would be an interface for mobile, tablet or desktop. As I opted to create a web interface, I decided to create a responsive page that would work across all devices.
+- I assumed from the brief that the user would search using a UK postcode. While the brief only stated data have to be returned from one postcode, I thought it would be more fun and provide future-proofing by allowing the user to search with any UK postcode. 
+- I assumed an API key would be provided — if not, I could either use mock data and hardcode it in or I could create a proxy server as a quick workaround until an.
+- Features like pagination or advanced filtering were considered out of scope for MVP due to time constraints, but would make great future features.
+- Although the brief did define the pieces of data it wanted returned, such as cuisines or address, it didn't specify if it wanted all the cuisines listed in the array (there was additional info in the cuisines that mentioned deals which will be best to not return if it was just a list of food types). Same for address, should only the firstLine be included? The city? I checked the Just Eat app to see how they displayed restaurant data for their customers and followed that formula.
+- The brief did not mention if this is an application that would be built upon in the future. For the sake of future-proofing, I tried to plan this project with the idea that it would be improved upon at a later date and how this would affect the code I write right now.
 
 
 [Back to top](#)
