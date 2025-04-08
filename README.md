@@ -160,7 +160,7 @@ Using the MoSCoW method, it was determined that these features either weren't es
 
 ## Testing and Debugging
 
-Testing was done throughout, both manually (by myself and outside testers) and using validators (see below).
+Testing was done throughout, both manually (by myself and outside testers). Still need to run project through validators, but have include a list of what these would be (see below).
 
 ### Manual Testing
 Manual testing was performed throughout using console.log and console.error, as well as web dev tools in Google Chrome.
@@ -181,15 +181,19 @@ Manual testing was performed throughout using console.log and console.error, as 
 ### Validator Testing - TBA
 
 - HTML
-  - Passed through the official [W3C validator](https://validator.w3.org/): some errors
+  - Passed through the official [W3C validator](https://validator.w3.org/): some errors/Pass
 Insert screenshots here 
+
 
 - CSS
-  - Passed through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) successfully:
+  - Passed through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/): some errors/Pass
 Insert screenshot here 
 
+
 - JavaScript
-Insert screenshots here 
+- Passed through JavaScript validator(https://www.site24x7.com/tools/javascript-validator.html): some errors/Pass
+Insert screenshot here 
+
 
 - Website Optimization and Accessibility tested using Lighthouse via Chrome DevTools:
   - __Desktop__  
