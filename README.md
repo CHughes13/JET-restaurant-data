@@ -101,7 +101,7 @@ Lofi wireframes for mobile devices. From left to right: start screen, screen dis
 ![lofi-wireframe-mobile](https://github.com/user-attachments/assets/3f3235d3-5f5d-4ece-a397-d0dcd7b5cbb7)
 
 #### Desktop
-Lofi wireframes for desktop devices. From left to right: start screen, screen displaying results as cards, error feedback for the user.
+Lofi wireframes for desktop. From left to right: start screen, screen displaying results as cards, error feedback for the user.
 
 Start screen
 ![lofi-wireframe-desktop-start-screen](https://github.com/user-attachments/assets/75d1436e-d4bd-4ef9-9fbd-68fc89251387)
@@ -145,14 +145,14 @@ MoSCoW Method Diagram courtesy of [Bitesize Learning](https://www.bitesizelearni
 
 
 ### Features Left to Implement
-Using the MoSCoW method, it was determined that these features weren't essential to create a MVP but are more "should-have" and "could-have". Due to time constraintents these features were left out, but they would make great additions to the application in the future.
+Using the MoSCoW method, it was determined that these features either weren't essential to create a MVP and/or due to time constraints these features were left out, but they would make great additions to the application in the future.
 
 - **Sorting**: Sort results by rating or name.
 - **Pagination**: To show more than just the first 10 restaurants.
 - **Filters**: The ability to filter restaurants based on cuisine or rating.
 - **Loading indicator**: A simple animation that lets the user know the search is in progress.
 - **Map integration** To show the locations of the restaurants on a map (better for user).
-- **Back to top button**: Quality of life feature. Saves having to scroll - a small issue, but annoying nonetheless.
+- **Back to top button**: Quality of life feature. Saves having to scroll.
 
 [Back to top](#)
 
@@ -171,8 +171,8 @@ Manual testing was performed throughout using console.log and console.error, as 
 | Test | Expected Result | Actual Result	| Pass/Fail |
 | ------ | ------------------- |----------------- |------------ |
 |  Input valid postcode into the search bar (BS3 4AE) |  List of first 10 restaurants shown as individual cards |  Works as expected  |  Pass  |
-|  Input invalid postcode into the search bar (BS3 4AE) |  Error message appears below search bar prompting the user to enter a valid postcode  |  Was working as expected. Now has a "TypeError: Cannot read properties of undefined (reading 'logoUrl)    |  Fail  |
-|  Leave the search bar empty and then hit search button  |  Error message appears below search bar prompting the user to enter a valid postcode  |  Was working as expected.  |  Fail  |
+|  Input invalid postcode into the search bar (123123) |  Error message appears below search bar prompting the user to enter a valid postcode  |  Was working as expected. Now has a "TypeError: Cannot read properties of undefined (reading 'logoUrl)    |  Fail  |
+|  Leave the search bar empty and then hit search button  |  Error message appears below search bar prompting the user to enter a valid postcode  |  Was working as expected. Now has a "TypeError: Cannot read properties of undefined (reading 'logoUrl)  |  Fail  |
 |  Resize window to test layout responsiveness (mobile vs tablet vs desktop) |  List of first 10 restaurants shown as individual cards |  Works as expected  |  Pass  |
 |  Ensure restaurant data is correctly displayed  |  Each restaurant's data (name, cuisine, rating, address) will be shown as a card in that order with the correct details | Works as expected  |  Pass  |
 
@@ -202,7 +202,7 @@ Insert mobile screenshot here
 
 ***
 
-### Bugs Fixed - TBA
+### Bugs Fixed
 
 | Bug | Fix |
 |-----|-----|
@@ -215,8 +215,8 @@ Insert mobile screenshot here
 |-----|-----|
 | (1) Error message to prompt user to enter a valid postcode. Was working as expected. Now has a "TypeError: Cannot read properties of undefined (reading 'logoUrl)    |  TBA  |
 | (2) Any search after the first appears after the first search - first search doesn't clear and cards just keep adding to the bottom    |  Need to clear previous search results completely  |
-| (3) Style issue on cards where ordered list appears when it should |Target and apply CSS: list-style-type: none;|
-| (4) Restaurant data - cuisines includes more then just food types, but also deals and offers as well | Need to make sure that when code loops through it doesn't include these particular terms |
+| (3) Style issue on cards where numbers of ordered list appear when they shouldn't |Target and apply CSS: list-style-type: none;|
+| (4) Restaurant data - cuisines includes more then just food types, but also deals and offers as well | Need to make sure that when code loops through it doesn't include these particular terms/knows to ignore them |
 
 
 Bug (1) and (2)
@@ -239,9 +239,12 @@ git clone https://github.com/CHughes13/JET-restaurant-data.git
 
 2. Go into the project directory and open `index.html` in your browser.
 
-3. Ensure you have access to the Just Eat API demo server to fetch live data.
+3. Ensure you have access to the Just Eat API demo server to fetch live data. I used a free public proxy server (limited use) to avoid CORS issues. Please note that the demo server here only offers permission for a limited time, so you will have to manually go in and click the button on their website to enable access.
+```
+const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+const apiUrl = `https://uk.api.just-eat.io/discovery/uk/restaurants/enriched/bypostcode/${postcode}`;
 
-
+```
 [Back to top](#)
 
 ***
@@ -258,7 +261,7 @@ This project is deployed via GitHub Pages:
 ## Credits
 __Resources Used and Consulted__ 
 - [Just Eat Takeaway API and API Documentation](https://uk.api.just-eat.io/docs)
-- [Just Eat Color scheme Pie](https://pie.design/foundations/colour/tokens/alias/light/)
+- [Just Eat PIE Design System](https://pie.design/)
 - [Brand box](https://brand-box.marketing.just-eat.com/)
 - [Medium ](https://medium.com/jetux) for articles on Just Eat UX
 - [MDN web docs](https://developer.mozilla.org/) for helpful guides on all things coding.
@@ -268,18 +271,19 @@ __Resources Used and Consulted__
 - [Blackbox AI](https://www.blackbox.ai/) used throughout for coding advice, troubleshooting and inspiration.
 - Angela Yu's [The Complete 2024 Web Development Bootcamp course on Udemy](https://www.udemy.com/course/the-complete-web-development-bootcamp)
 - [Bro Code](https://www.youtube.com/@BroCodez)'s helpful YouTube tutorials and explanations.
-- [JSON Visualiser](https://jsonviewer.stack.hu/)
--[Postman](https://web.postman.co/)
+- [Postman](https://web.postman.co/) to test API.
+- [JSON Visualiser](https://jsonviewer.stack.hu/) to display JSON in a nice, clean format.
+
 
 __Media__  
 - [Font Awesome](https://fontawesome.com/) for the social media icons in the footer and magnifying glass in search bar.
 - Restaurant logos and favicons courtesy of the [Just Eat](https://www.just-eat.com) website.
-- MoSCoW Method Diagram courtesy of [Bitesize Learning](https://www.bitesizelearning.co.uk/resources/moscow-prioritisation-model)
+- MoSCoW Method Diagram courtesy of [Bitesize Learning](https://www.bitesizelearning.co.uk/resources/moscow-prioritisation-model).
 
 __Special Thanks To__ 
 - The Just Eat team for this wonderful opportunity.
 - Code Institute's Coding Bootcamp.
-- Christopher, Sebastian and Ian for all their technical support, advice and testing.
+- Chris, Seb and Ian for all their technical support, advice and testing.
 
 [Back to top](#)
 
