@@ -208,12 +208,14 @@ Insert mobile screenshot here
 
 ### Bugs Fixed
 
+These are the bugs that were found during testing and how they were fixed.
+
 | Bug | Fix |
 |-----|-----|
 | API call returning CORS error and data not displaying after fetch | Requested access to API demo server |
 | Favicons not showing up on deployed site | Corrected file paths from absolute to relative |
 
-
+These are known bugs that are still causing issues. If you find any other bugs, please do reach out to me on [LinkedIn](https://www.linkedin.com/in/chughes13/) and let me know.
 ### Known Bugs
 | Known Bug | Potential Fix |
 |-----|-----|
