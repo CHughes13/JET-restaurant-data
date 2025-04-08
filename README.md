@@ -3,6 +3,7 @@
 **Project status**: In progress  
 **Deployed link**: [https://chughes13.github.io/JET-restaurant-data/](https://chughes13.github.io/JET-restaurant-data/)
 
+![jet-project-deployed-start-screen](https://github.com/user-attachments/assets/ba058984-c0eb-4769-8127-f3e3ecc262e3)
 
 
 ***
@@ -124,15 +125,21 @@ This project was planned out using agile principles. I used the MoSCoW prioritis
 MoSCoW Method Diagram courtesy of [Bitesize Learning](https://www.bitesizelearning.co.uk/resources/moscow-prioritisation-model)
 ![moscow-method-diagram](https://github.com/user-attachments/assets/1de1b53d-69a4-44b9-83d0-52d6650d9523)
 
-INSERT MOWCOW IMAGE here and link/credit 
-https://www.bitesizelearning.co.uk/resources/moscow-prioritisation-model
 
 ### Existing Features
 - Search by postcode form.
+- ![jet-project-deployed-start-screen](https://github.com/user-attachments/assets/d3a65a81-572b-4502-b20d-2b12260ede77)
+
 - Fetches and displays restaurant data from the Just Eat API.
 - Displays: Restaurant logo, restaurant name, cuisine type/s, rating and address.
-- Responsive layout for mobile, tablet and desktop.
-- Error handling for invalid postcodes or no results found.
+- ![jet-project-deployed-results-display](https://github.com/user-attachments/assets/0a60f266-a514-4eae-8bc1-d55f6e4b2832)
+
+- Responsive layout for mobile, tablet and desktop (NOTE: Ideally the cards on tablet and mobile would change to display 2 or 3 cards across one row using display: flex).
+- ![responsive-layout-mobile](https://github.com/user-attachments/assets/4fcdf6a0-83b6-4534-9f11-741bc0fdf589)
+![responsive-layout-desktop](https://github.com/user-attachments/assets/fa7214cd-fe63-420f-8f71-c2ff469461ac)
+
+
+- Error handling for invalid postcodes or no results found (Note: Was working, but now isn't. Added to "Known Bugs" section below)
 
 ### Features Left to Implement
 Using the MoSCoW method, it was determined that these features weren't essential to create a MVP but are more "should-have" and "could-have". Due to time constraintents these features were left out, but they would make great additions to the application in the future.
@@ -142,7 +149,7 @@ Using the MoSCoW method, it was determined that these features weren't essential
 - **Filters**: The ability to filter restaurants based on cuisine or rating.
 - **Loading indicator**: A simple animation that lets the user know the search is in progress.
 - **Map integration** To show the locations of the restaurants on a map (better for user).
-- **Back to top button**: Quality of life feature. Saves having to scroll - a small issue, but annoying nontheless.
+- **Back to top button**: Quality of life feature. Saves having to scroll - a small issue, but annoying nonetheless.
 
 [Back to top](#)
 
@@ -157,12 +164,11 @@ Manual testing was performed throughout using console.log and console.error, as 
 ![testing-dev-tools-console](https://github.com/user-attachments/assets/61f1dd8b-beda-411c-bb7e-20bc527ce2f9)
 
 
-
 | Test | Expected Result | Actual Result	| Pass/Fail |
 | ------ | ------------------- |----------------- |------------ |
 |  Input valid postcode into the search bar (BS3 4AE) |  List of first 10 restaurants shown as individual cards |  Works as expected  |  Pass  |
-|  Input invalid postcode into the search bar (BS3 4AE) |  Error message appears below search bar prompting the user to enter a valid postcode  |  Works as expected  |  Pass  |
-|  Leave the search bar empty and then hit search button  |  Error message appears below search bar prompting the user to enter a valid postcode  |  Works as expected  |  Pass  |
+|  Input invalid postcode into the search bar (BS3 4AE) |  Error message appears below search bar prompting the user to enter a valid postcode  |  Was working as expected. Now has a "TypeError: Cannot read properties of undefined (reading 'logoUrl)    |  Fail  |
+|  Leave the search bar empty and then hit search button  |  Error message appears below search bar prompting the user to enter a valid postcode  |  Was working as expected.  |  Fail  |
 |  Resize window to test layout responsiveness (mobile vs tablet vs desktop) |  List of first 10 restaurants shown as individual cards |  Works as expected  |  Pass  |
 |  Ensure restaurant data is correctly displayed  |  Each restaurant's data (name, cuisine, rating, address) will be shown as a card in that order with the correct details | Works as expected  |  Pass  |
 
@@ -198,9 +204,21 @@ Insert mobile screenshot here
 | API call returning CORS error and data not displaying after fetch | Requested access to API demo server |
 | Favicons not showing up on deployed site | Corrected file paths from absolute to relative |
 
-### Known Bugs - TBA
+### Known Bugs
 | Known Bug | Potential Fix |
 |-----|-----|
+| (1) Error message to prompt user to enter a valid postcode. Was working as expected. Now has a "TypeError: Cannot read properties of undefined (reading 'logoUrl)    |  TBA  |
+| (2) Any search after the first appears after the first search - first search doesn't clear and cards just keep adding to the bottom    |  Need to clear previous search results completely  |
+| (3) Style issue on cards where ordered list appears when it should |Target and apply CSS: list-style-type: none;|
+| (4) Restaurant data - cuisines includes more then just food types, but also deals and offers as well | Need to make sure that when code loops through it doesn't include these particular terms |
+
+Bug (1) and (2)
+![Screenshot 2025-04-08 020332](https://github.com/user-attachments/assets/8915fca9-5d33-433a-9e88-4a35c6ca988d)
+
+
+Bugs (3) and (4)
+![responsive-layout-mobile](https://github.com/user-attachments/assets/266698c3-2614-4b36-9c24-7eda2219b68c)
+
 
 [Back to top](#)
 
